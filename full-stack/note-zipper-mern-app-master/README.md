@@ -1,1 +1,0 @@
-# MERN stack project with redux
