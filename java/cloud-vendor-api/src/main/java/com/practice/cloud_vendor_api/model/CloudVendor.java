@@ -1,6 +1,16 @@
 package com.practice.cloud_vendor_api.model;
 
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name="cloud_vendor_info")
 public class CloudVendor {
+    @Id
+    @GeneratedValue
     private String vendorId;
     private String vendorName;
     private String vendorAddress;
