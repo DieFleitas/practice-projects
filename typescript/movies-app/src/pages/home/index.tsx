@@ -2,6 +2,8 @@ import React, { SetStateAction, useState } from 'react';
 import Layout from '../../Layout';
 import { Box, InputAdornment, InputBase, Paper, Typography } from '@mui/material';
 import SearchIcon from "../../assets/icons/icon-search.svg"
+import MovieTrendList from '../../components/movie-list/movieTrendList';
+import MovieList from '../../components/movie-list';
 
 const Home = () => {
   const [search, setSearch] = useState('');
