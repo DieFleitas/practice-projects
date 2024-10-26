@@ -1,4 +1,5 @@
 import argparse
+from search import breadth_first, depth_first, binary
 
 def main():
     parser = argparse.ArgumentParser(description="Search for word in file")
@@ -13,15 +14,15 @@ def main():
 
     args = parser.parse_args()
 
-    if args.search_algorithm === "depth-first-search":
+    if args.search_algorithm == "depth-first-search":
         depth_first.search(args)
         return
     
-    if args.search_algorithm === "breadth-first-search":
+    if args.search_algorithm == "breadth-first-search":
         breadth_first.search(args)
         return
     
-    if args.search_algorithm === "binary-search":
+    if args.search_algorithm == "binary-search":
         binary.search(args)
         return
 
