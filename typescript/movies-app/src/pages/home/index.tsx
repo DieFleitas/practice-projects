@@ -8,7 +8,7 @@ import { MovieDataType } from '../../assets/data';
 
 const Home = () => {
   const [search, setSearch] = useState('');
-  const [searchList, setSearchList] = useState<MovieDataType>([])
+  const [searchList, setSearchList] = useState<MovieDataType[]>([])
   const handleSearch = (e: { target: { value: SetStateAction<string> } }) => {
     setSearch(e.target.value);
   };
