@@ -10,7 +10,7 @@ def main():
 
     parser.add_argument("-sa", "--search-algorithm", choices=["binary-search", "depth-first-search", "breadth-first-search"], required=True, help="The algorithm to be used to search the file")
 
-    parser.add_argument("-o", "--order", choices=["pre-order", "post-order", "level-order"], required=True, help="Order in wich to traverse the tree")
+    parser.add_argument("-o", "--order", choices=["pre-order", "post-order", "in-order", "level-order"], required=True, help="Order in wich to traverse the tree")
 
     args = parser.parse_args()
 
