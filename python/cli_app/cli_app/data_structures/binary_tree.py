@@ -28,6 +28,25 @@ class BinaryTree:
             else:
                 queue.enqueue(node.right)
 
+    def bst_insert_recursive(self, data, root):
+        if int(data) < int(root.data):
+            if root.left is None:
+                root.left = Node(data)
+            else :
+                self.bst_insert_recursive(data, root.left)
+        
+        if int(data) > int(root.data):
+            if root.right is None:
+                root.right = Node(data)
+            else:
+                self.bst_insert_recursive(data, root.right)
+
+    def bst_insert(self, data):
+        if self.root is None:
+            self.root = Node(data)
+        else:
+            self.bst_insert_recursive(data, self.rooot)
+
     def create_from_file(self, path):
         with open(path, "r") as a_file:
             for line in a_file:
@@ -36,3 +55,18 @@ class BinaryTree:
                     words = stripped_line.split()
                     for word in words:
                         self.level_order_insert(word)
+
+    def create_bst_from_file(self, path):
+        with open(path, "r") as a_file:
+            for line in a_file:
+                stripped_line = line.strip()
+                if stripped_line is not "":
+                    words = stripped_line.split()
+                    for word in words:
+                        self.bst_insert(word)
+
+    def in_order_print(self, root):
+        if root:
+            self.in_order_print(root.left)
+            print(root.data)
+            self.in_order_print(root.right)
