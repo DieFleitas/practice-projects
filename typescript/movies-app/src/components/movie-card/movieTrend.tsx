@@ -66,10 +66,10 @@ const MovieTrendCard = ({ movie }: MovieTrendCardProps) => {
                 {movie.rating}
               </Typography>
             </Grid>
-            <Typography color='"#e0e0e0' padding={0} aria-label="movie title">
+          </Grid>
+          <Typography color='"#e0e0e0' padding={0} aria-label="movie title">
               {movie.title}
             </Typography>
-          </Grid>
         </Stack>
         <Box
           style={{
